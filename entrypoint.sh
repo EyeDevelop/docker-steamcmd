@@ -13,7 +13,7 @@ if [[ ! -d /data ]]; then
 fi
 
 # Make sure our user has the correct permissions.
-chown steamcmd:steamcmd /data
+chown -R steamcmd:steamcmd /data
 
 # Update the game if necessary, or download it in the first place.
 su steamcmd -c "/usr/games/steamcmd +login anonymous +force_install_dir /data +app_update $STEAM_APPID validate +quit"
