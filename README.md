@@ -11,7 +11,8 @@ $ docker run -dp 27005-27015:27005-27015\
                           -v "/path/to/data:/data"
                           -e PUID=<your UID>\
                           -e PGID=<your GID>\
-                          -e STEAM_APPID=232250
+                          -e STEAM_APPID=232250\
+                          eyedevelop/steamcmd
 ```
 
 The container will then download all the files of the game you specified. After this, it will ask you to make a small shell script named 'run_server.sh' in the data directory. It runs this script on container start, after verifying and updating the game. So again, for TF2, this would be as follows:
